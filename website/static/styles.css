@@ -116,22 +116,43 @@ ul, li, a {
 }
 
 .cta-button {
+    position: relative; /* Needed for SVG positioning */
     display: inline-block;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 1.5rem; /*Experimenting with the REM unit, as it automatically assures responsiveness of the webpage */
-    font-weight: 400;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    box-shadow: 2.745px 2.745px 8.965px 0px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease;
-    
+    background-color: #000000; /* No hover background change */
+    color: #ffffff; /* No hover font color change */
+    font-size: 1.5rem; /* Maintained */
+    font-weight: 400; /* Maintained */
+    padding: 0.5rem 1rem; /* Maintained */
+    border-radius: 10px; /* Maintained */
+    box-shadow: 2.745px 2.745px 8.965px 0px rgba(0, 0, 0, 0.25); /* Maintained */
+    overflow: hidden; /* Ensures the SVG rectangle stays within the button */
+    line-height: 1.5; /* Maintained */
 }
 
-.cta-button:hover {
-    background-color: #333;
-
+/* SVG Rectangle Animation */
+.cta-button svg {
+    position: absolute;
+    top: -5px; /* 5px gap above the button */
+    left: -5px; /* 5px gap to the left */
+    width: calc(100% + 10px); /* Add 5px gap on each side */
+    height: calc(100% + 10px); /* Add 5px gap on top and bottom */
+    pointer-events: none; /* Prevent SVG from interfering with button clicks */
 }
+
+.cta-button rect {
+    fill: none; /* No fill for the rectangle */
+    stroke: #000000; /* Black stroke for the border */
+    stroke-width: 4; /* Thicker stroke */
+    stroke-dasharray: 400; /* Total length of the rectangle perimeter */
+    stroke-dashoffset: 400; /* Initially hide the stroke */
+    transition: stroke-dashoffset 1.35s cubic-bezier(0.19, 1, 0.22, 1); /* Smooth animation */
+}
+
+.cta-button:hover rect {
+    stroke-dashoffset: 1; /* Animate the stroke fully around */
+}
+
+
 
 /* Mobile Hamburger Icon */
 .hamburger {

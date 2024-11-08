@@ -1,0 +1,132 @@
+/* General Reset */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 2vw;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Logo Styling */
+.logo-container {
+    margin-left: 3%;
+}
+
+.logo {
+    width: 5vw;
+    height: auto;
+    max-height: 7vh;
+}
+
+/* Desktop Links */
+.nav-links {
+    display: flex;
+    gap: 2vw;
+    text-align: center;
+}
+
+.nav-links li {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-links a {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+/* Call-to-Action Button */
+.cta-button-container {
+    margin-right: 2%;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Hamburger Icon */
+.hamburger {
+    display: none;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.hamburger img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 10vh; /* Below the navbar */
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    padding: 1rem;
+    text-align: center;
+}
+
+.mobile-menu li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.mobile-menu a {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links,
+    .cta-button-container {
+        display: none; /* Hide desktop links and CTA */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .logo {
+        width: 10vw; /* Adjust logo size */
+        max-height: 6vh;
+    }
+}

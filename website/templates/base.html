@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <title>base</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>{% block title %}
+        Base
+        {% endblock %}</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon_io/site.webmanifest">
 
+    <!--here I place the Montserrat font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar">
         <!-- Logo -->
         <div class="logo-container">
-            <img src="../static/images/logo.png" alt="Logo" class="logo">
+            <img src="../static/pictures/preparation-favicon-exq.png" alt="EXQ-Logo" class="logo">
         </div>
 
         <!-- Links for Desktop -->
         <ul class="nav-links">
-            <li><a href="#offer">THE OFFER</a></li>
-            <li><a href="#philosophy">PHILOSOPHY</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#offer">The Offer</a></li>
+            <li><a href="#philosophy">Philosophy</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <!-- Call-to-Action Button -->
         <div class="cta-button-container">
-            <a href="#cta" class="cta-button">Get Started</a>
+            <a href="https://calendly.com/maksymilian-exqdigital/30min?month=2024-11" class="cta-button">Schedule Call</a>
         </div>
 
         <!-- Hamburger Menu (Visible in Mobile) -->

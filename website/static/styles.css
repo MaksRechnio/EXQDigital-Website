@@ -1,0 +1,194 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+    font-optical-sizing: auto; /* Improves legibility if supported */
+    margin: 0; /* Resets margins */
+    padding: 0; /* Resets padding */
+    box-sizing: border-box; /* Ensures consistent box model */
+}
+
+
+/* FONTS -MONTSERRAT - Defined seperately to allow playing with font weight */
+
+.montserrat-thin {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100; /* Thin */
+    font-style: normal;
+  }
+  
+  .montserrat-extra-light {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200; /* Extra Light */
+    font-style: normal;
+  }
+  
+  .montserrat-light {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300; /* Light */
+    font-style: normal;
+  }
+  
+  .montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Regular */
+    font-style: normal;
+  }
+  
+  .montserrat-medium {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /* Medium */
+    font-style: normal;
+  }
+  
+  .montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Bold */
+    font-style: normal;
+  }
+
+body{
+    margin: 1.5%;
+}
+
+/* General Reset */
+ul, li, a {
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh; /* Adjust as needed for vertical responsiveness */
+    background-color: #ffffff;
+    margin-bottom: 10px; /* Lowers the navbar slightly */
+    box-shadow: none; /* Removes the shadow effect */
+    position: relative;
+}
+
+/* Logo Styling */
+.logo-container {
+    margin-left: 3%;
+}
+
+.logo {
+    width: 5vw;
+    height: auto;
+    
+}
+
+/* Desktop Links */
+.nav-links {
+    margin-left: 6%;
+    display:flex;
+    gap: 7vw;
+    text-align: center;
+    
+}
+
+.nav-links li {
+    font-size: 22px;
+}
+
+.nav-links a {
+    color: #000;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+/* Call-to-Action Button */
+.cta-button-container {
+    margin-right: 2.8%;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.5rem; /*Experimenting with the REM unit, as it automatically assures responsiveness of the webpage */
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 2.745px 2.745px 8.965px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    
+}
+
+.cta-button:hover {
+    background-color: #333;
+
+}
+
+/* Mobile Hamburger Icon */
+.hamburger {
+    display: none;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.hamburger img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 10vh; /* Below the navbar */
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: none;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    padding: 1rem;
+    text-align: center;
+}
+
+.mobile-menu li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.mobile-menu a {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links,
+    .cta-button-container {
+        display: none; /* Hide desktop links and CTA */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .logo {
+        width: 17vw; /* Adjust logo size */
+        max-height: 10vh;
+        padding: 10% 0 0 10%;
+    }
+}

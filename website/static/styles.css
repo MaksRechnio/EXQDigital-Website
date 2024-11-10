@@ -103,7 +103,7 @@ ul, li, a {
 .nav-links a {
     color: #000;
     transition: color 0.3s ease;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .nav-links a:hover {
@@ -234,7 +234,7 @@ ul, li, a {
 
 .slogan-heading-home-desktop {
     grid-area: 1 / 2 / 2 / 3;
-    font-size: 70px;
+    font-size: 62px;
     text-shadow: 2px 2px 4px 0;
     padding-bottom: 5%;
     display: flex;
@@ -263,13 +263,11 @@ ul, li, a {
     
 }
 
-    .div3 {  }
-    .div4 { grid-area: 2 / 3 / 3 / 4; }
 
 /* text shadow grouo */
 
 .text-shadow {
-    text-shadow:1px 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow:2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* svg scroll bar  */
@@ -301,4 +299,137 @@ ul, li, a {
     to {
         stroke-dashoffset: 0; /* Fully visible */
     }
+}
+
+
+/* General Styling for corner-element-1 SVG - the landing home page */
+.corner-element-1-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 20px 0;
+    grid-area: 1 / 3 / 3 / 4;
+    padding: 0 0 30% 0;
+}
+
+.corner-element-1-figure figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Animation for corner-element-1 */
+@keyframes corner-element-1-draw {
+    0% {
+        stroke-dasharray: 0 500; /* Start hidden */
+        stroke-dashoffset: 500; /* Fully hidden */
+    }
+    100% {
+        stroke-dasharray: 500 500; /* Fully visible */
+        stroke-dashoffset: 0; /* Fully drawn */
+    }
+}
+
+/* Styling Specific to corner-element-1 */
+.corner-element-1-svg {
+    width: 178px; /* Adjust to match SVG dimensions */
+    height: 178px; /* Adjust to match SVG dimensions */
+    display: block;
+}
+
+.corner-element-1-path {
+    stroke-dasharray: 500; /* Approximate stroke length */
+    stroke-dashoffset: 500; /* Initially hidden */
+    animation: corner-element-1-draw 3s ease-in-out forwards; /* 3 seconds for animation */
+}
+
+/* Plus - design element for the slogan on home page */
+
+/* General Styling for home-plus-element SVG */
+.home-plus-element-figure {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 17% 9% 0 0%;
+    margin: 10px 0;
+}
+
+.home-plus-element-figure figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Animation for home-plus-element */
+@keyframes home-plus-element-draw {
+    0% {
+        stroke-dasharray: 0 100; /* Start hidden */
+        stroke-dashoffset: 100; /* Fully hidden */
+    }
+    100% {
+        stroke-dasharray: 100 100; /* Fully visible */
+        stroke-dashoffset: 0; /* Fully drawn */
+    }
+}
+
+/* Styling Specific to home-plus-element */
+.home-plus-element-svg {
+    width: 39px; /* Match SVG dimensions */
+    height: 39px; /* Match SVG dimensions */
+    display: block;
+}
+
+.home-plus-element-path {
+    stroke-dasharray: 100; /* Approximate stroke length */
+    stroke-dashoffset: 100; /* Initially hidden */
+    animation: home-plus-element-draw 3s ease-in-out forwards; /* 3 seconds for animation */
+}
+
+
+/* Slogan corner - design element */
+
+/* General Styling for home-slogan-corner-element SVG */
+.home-slogan-corner-element-figure {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 18% 10%;
+}
+
+.home-slogan-corner-element-figure figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Animation for home-slogan-corner-element */
+@keyframes home-slogan-corner-element-draw {
+    0% {
+        stroke-dasharray: 0 150; /* Start hidden */
+        stroke-dashoffset: 150; /* Fully hidden */
+    }
+    100% {
+        stroke-dasharray: 150 150; /* Fully visible */
+        stroke-dashoffset: 0; /* Fully drawn */
+    }
+}
+
+/* Styling Specific to home-slogan-corner-element */
+.home-slogan-corner-element-svg {
+    width: 121px; /* Match SVG dimensions */
+    height: 121px; /* Match SVG dimensions */
+    display: block;
+}
+
+.home-slogan-corner-element-path {
+    stroke-dasharray: 150; /* Approximate stroke length */
+    stroke-dashoffset: 150; /* Initially hidden */
+    animation: home-slogan-corner-element-draw 3s ease-in-out forwards; /* 3 seconds for animation */
 }

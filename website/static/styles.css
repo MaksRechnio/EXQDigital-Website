@@ -261,7 +261,9 @@ ul, li, a {
 .flowout-animation {
     opacity: 0; /* Start fully transparent */
     transform: translateY(20px); /* Start slightly below its position */
-    animation: flowOut 1.5s ease-out forwards; /* Animation applied */}
+    animation: flowOut 2s ease-out forwards; /* Animation applied */
+}
+
 
  .subheading-home-page {
     padding: 0 15% 25% 15%;

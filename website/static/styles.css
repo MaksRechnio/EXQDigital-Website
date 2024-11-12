@@ -493,7 +493,7 @@ The design for the the next element - second vh
     /* font settings */
     font-weight: 300;
     color: #ffffff;
-    font-size: 26px;
+    font-size: 24px;
     text-align: left;
     /* Display settings */
     display: inline-block;
@@ -511,11 +511,11 @@ The design for the the next element - second vh
     background-color: #ffffff;
     border-radius: 10px;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 26px;
     cursor: pointer;
     /* dimensions */
     padding: 2% 0 2% 0;
-    width: 60%;
+    width: 50%;
     height: 5%;
     /* the spacing and alignment */
     display: flex;
@@ -595,38 +595,124 @@ The design for the the next element - second vh
 }
 
 
+/* 
 
-/* here i make the design for the plus design element for niches  */
+here I start to design the thrid element of the page
+    - The HNWI Targetting part
+*/
 
-/* Container for Small Plus Element */
-.small-plus-element-container {
+/*  I will use grid as it fits the design best for intitial design */
+.hnwi-targetting-box {
+    width: 100%;
+    height: 56vh;
+    background-color: #ffffff;
+    /* grid design */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.hnwi-targetting-picture-box {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 0 10%;
+}
+
+.hnwi-targetting-text-box { 
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+     /*text settings  */
+     text-align: left;
+     /* padding: 0 12% 0 0; */
+     
+}
+
+.hnwi-targetting-text-primary {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0 0 3% 0;
+    padding: 0 9% 0 0;
+
+}
+.hnwi-targetting-text-secondary {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0% 0 4% 0;
+    padding: 0 25% 0 0;
+}
+
+.hnwi-targetting-picture {
+    border-radius: 20px;
+    width: 28vw;
+    height: auto;
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.hnwi-targetting-cta-button {
+    background-color: #000000;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 2.5% 0 2.5% 0;
+    width: 30%;
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+}
+
+
+
+/* Styling and animation for the new corner */
+
+/* Container for Corner Element */
+.new-corner-element-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px auto;
+    margin: 10px auto; /* Center it within its container */
 }
 
-/* SVG Styling */
-.small-plus-element-svg {
-    width: 39px; /* Match SVG dimensions */
-    height: 39px; /* Match SVG dimensions */
+/* Styling for the SVG */
+.new-corner-element-svg {
+    width: 94px; /* Match SVG size */
+    height: 94px; /* Match SVG size */
     display: block;
 }
 
-/* Draw-Out Animation */
-.small-plus-element-path {
-    stroke-dasharray: 100; /* Adjust to path length */
-    stroke-dashoffset: 100; /* Start hidden */
-    animation: draw-path 3s ease-out forwards; /* Smooth draw-out animation */
-    animation-play-state: paused; /* Default: paused */
+/* Animation for paths */
+.new-corner-element-path {
+    stroke-dasharray: 150; /* Match actual path length */
+    stroke-dashoffset: 150; /* Start hidden */
+    animation: draw-path 3s ease-out forwards; /* Smooth draw-out */
+    
 }
 
-/* Keyframes for Draw-Out Animation */
+/* Keyframes for draw-out animation */
 @keyframes draw-path {
     from {
-        stroke-dashoffset: 100; /* Fully hidden */
+        stroke-dashoffset: 150; /* Fully hidden */
     }
     to {
         stroke-dashoffset: 0; /* Fully drawn */
     }
+}
+
+.hnwi-corner {
+    display: flex;
+    height: 56vh;
+    padding: 0 0 0 0;
 }

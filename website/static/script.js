@@ -4,43 +4,43 @@ function toggleMenu() {
     mobileMenu.classList.toggle('active');
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
-    const nichesCornerPaths = document.querySelectorAll('.niches-corner-path');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                nichesCornerPaths.forEach(path => {
-                    path.style.animationPlayState = 'running';
-                });
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const svgContainer = document.querySelector('.niches-corner-element-container');
-    observer.observe(svgContainer);
-});
-
-//This is the function that allows me to show items to user only as they have it in their sight, so i can have cool pop-in animations throughout my page
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Select elements for both pop-in and draw animations
+    // Select elements for pop-in animations and draw-out animations
     const elementsToAnimate = document.querySelectorAll('.pop-in-effect, .draw-in-effect');
+    const nichesCornerPaths = document.querySelectorAll('.niches-corner-path');
+    const nichesCornerContainer = document.querySelector('.niches-corner-element-container');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Handle pop-in effect
                 if (entry.target.classList.contains('pop-in-effect')) {
-                    entry.target.classList.add('pop-in'); // Add pop-in animation
+                    entry.target.classList.add('pop-in');
                 }
+
+                // Handle draw-out effect for general elements
                 if (entry.target.classList.contains('draw-in-effect')) {
-                    entry.target.style.animationPlayState = 'running'; // Trigger draw-out animation
+                    entry.target.style.animationPlayState = 'running';
                 }
-                observer.unobserve(entry.target); // Stop observing once animated
+
+                // Handle nichesCornerPaths draw-out animation
+                if (entry.target === nichesCornerContainer) {
+                    nichesCornerPaths.forEach(path => {
+                        path.style.animationPlayState = 'running';
+                    });
+                }
+
+                // Stop observing the target after triggering animation
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 }); // Trigger when 50% of the element is in view
 
+    // Observe all elements for animations
     elementsToAnimate.forEach(element => observer.observe(element));
+
+    // Specifically observe the niches corner container
+    if (nichesCornerContainer) {
+        observer.observe(nichesCornerContainer);
+    }
 });

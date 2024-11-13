@@ -68,3 +68,52 @@ document.addEventListener('DOMContentLoaded', () => {
     // Observe all draw-in-effect elements
     elementsToAnimate.forEach(element => observer.observe(element));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const bigVerticalLinePaths = document.querySelectorAll(
+        ".big-vertical-line-path"
+    );
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    bigVerticalLinePaths.forEach((path) => {
+                        path.style.animationPlayState = "running"; // Start animation
+                    });
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
+            });
+        },
+        { threshold: 0.5 } // Trigger when 50% in view
+    );
+
+    const svgContainer = document.querySelector(".big-vertical-line");
+    observer.observe(svgContainer);
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const advertisingLowerSvgPaths = document.querySelectorAll(
+        ".advertising-lower-svg-corner-path"
+    );
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    advertisingLowerSvgPaths.forEach((path) => {
+                        path.style.animationPlayState = "running"; // Start animation
+                    });
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
+            });
+        },
+        { threshold: 0.5 } // Trigger when 50% in view
+    );
+
+    const svgContainer = document.querySelector(
+        ".advertising-lower-svg-corner"
+    );
+    observer.observe(svgContainer);
+});

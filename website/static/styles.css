@@ -1,6 +1,6 @@
 * {
     font-family: "Montserrat", sans-serif;
-    font-weight: 400; /* Regular weight */
+    /* font-weight: 400 ; Regular weight */
     font-style: normal;
     font-optical-sizing: auto; /* Improves legibility if supported */
     margin: 0; /* Resets margins */
@@ -715,4 +715,111 @@ here I start to design the thrid element of the page
     display: flex;
     height: 56vh;
     padding: 0 0 0 0;
+}
+
+
+.trusted-companies-background-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 31vh;
+    width: 100%;
+    margin: 3% 0 3% 0;
+}
+
+.trusted-by-companies-box {
+    background-color: #000000;
+    padding-top: 1%;
+    width: 90%;
+    height: 90%;
+    border-radius: 2.5rem;
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.25);
+    /* display settings */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Font Settings */
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 200;
+    flex-direction: column;
+    /* shadow design */
+    box-shadow: 
+        calc(0.2rem + 0.3vw) calc(0.2rem + 0.3vw) calc(0.2rem + 0.3vw) rgba(0, 0, 0, 0.2), 
+        calc(-0.1rem - 0.15vw) calc(-0.1rem - 0.15vw) calc(0.15rem + 0.2vw) rgba(0, 0, 0, 0.2);
+}
+
+.trusted-by-companies-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3% 0 3%;
+    margin-top: 1%;
+}
+
+.companies-logos {
+    width: 350px;
+    height: auto;
+}
+
+.right-logo-margin {
+    margin-left: 5%;
+}
+.left-logo-margin {
+    margin-right: 5%;
+}
+
+
+/*
+ Lines Styling
+ */
+
+/* General class for all draw-in elements */
+.draw-in-effect {
+    opacity: 0; /* Start hidden */
+    animation: fade-in 0.3s ease-in forwards; /* Fast fade-in for visibility */
+}
+
+/* Container for the vertical line element */
+.vertical-line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto; /* Center it within its container */
+}
+
+/* Styling for the SVG */
+.vertical-line-svg {
+    width: 2px; /* Match SVG width */
+    height: 141px; /* Match SVG height */
+    display: block;
+}
+
+/* Specific animation for paths to be drawn */
+.vertical-line-path {
+    stroke-dasharray: 141; /* Match the total length of the path */
+    stroke-dashoffset: 70.5; /* Start at the center */
+    animation: draw-center-out 1.5s ease-out forwards; /* Smooth draw-out animation */
+    animation-play-state: paused; /* Default state is paused */
+}
+
+/* Keyframes for center-out draw animation */
+@keyframes draw-center-out {
+    0% {
+        stroke-dashoffset: 70.5; /* Fully hidden at the center */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Fully drawn from the center outward */
+    }
+}
+
+/* Optional: Fade-in for better visibility during the draw-out */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -44,3 +44,27 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(nichesCornerContainer);
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all elements with draw-in-effect
+    const elementsToAnimate = document.querySelectorAll('.draw-in-effect');
+
+    // Observer setup
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Trigger the draw-out animation
+                if (entry.target.classList.contains('draw-in-effect')) {
+                    const path = entry.target.querySelector('.vertical-line-path');
+                    path.style.animationPlayState = 'running'; // Start path animation
+                }
+                entry.target.style.opacity = 1; // Ensure visibility for draw-in-effect
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% visible
+
+    // Observe all draw-in-effect elements
+    elementsToAnimate.forEach(element => observer.observe(element));
+});

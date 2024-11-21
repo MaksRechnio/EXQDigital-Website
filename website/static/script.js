@@ -117,3 +117,25 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     observer.observe(svgContainer);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const elementsToAnimate = document.querySelectorAll('.pop-in-effect, .draw-in-effect');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('pop-in-effect')) {
+                    entry.target.classList.add('pop-in'); // Add pop-in animation
+                }
+                if (entry.target.classList.contains('draw-in-effect')) {
+                    entry.target.querySelectorAll('.contact-page-plus-element-path').forEach(path => {
+                        path.style.animationPlayState = 'running'; // Trigger draw animation
+                    });
+                }
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the element is in view
+
+    elementsToAnimate.forEach(element => observer.observe(element));
+});

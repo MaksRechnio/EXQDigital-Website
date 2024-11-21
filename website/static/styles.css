@@ -956,3 +956,84 @@ part of the webpage
         stroke-dashoffset: 0; /* Fully drawn */
     }
 }
+
+
+
+
+
+/* 
+-------------------------------------
+-------------------------------------
+
+Creating the Contact page design
+
+-------------------------------------
+-------------------------------------
+*/
+
+.contact-page {
+    width: 100%;
+    height: 100vh;
+}
+
+.heading-section-contact-page {
+    height: 25vh;
+    width: 100%;
+    /* Display settings */
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    /* font settings */
+    font-size: 3.2rem;
+    text-shadow: 3px 2px 4px #00000030;
+    /* alignment */
+    padding: 0 3% 0 3%;
+
+}
+
+/* svg element */
+/* Container for the contact-page-plus-element */
+.contact-page-plus-element-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Keeps it within its parent container */
+    margin: 0 auto;
+    width: auto;
+    padding-bottom: 3rem;
+}
+
+/* Styling for the SVG */
+.contact-page-plus-element-svg {
+    width: 100%; /* Make responsive */
+    max-width: 60px; /* Prevent from exceeding original size */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Animation for paths */
+.contact-page-plus-element-path {
+    stroke-dasharray: 100; /* Adjust to path length */
+    stroke-dashoffset: 100; /* Fully hidden */
+    animation: contact-page-draw-animation 1.5s ease-out forwards; /* Draw animation */
+    animation-play-state: paused; /* Default: paused */
+}
+
+/* Keyframes for draw animation */
+@keyframes contact-page-draw-animation {
+    from {
+        stroke-dashoffset: 100; /* Fully hidden */
+    }
+    to {
+        stroke-dashoffset: 0; /* Fully drawn */
+    }
+}
+
+
+/* Designing the content on the contact page */
+.content-contact-page {
+    height: 75vh;
+    width: 100%;
+    padding: 0 0 10% 0;
+}

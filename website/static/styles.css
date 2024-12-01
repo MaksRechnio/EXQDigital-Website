@@ -977,7 +977,7 @@ Creating the Contact page design
 }
 
 .heading-section-contact-page {
-    height: 25vh;
+    height: 20vh;
     width: 100%;
     /* Display settings */
     display: flex;
@@ -1032,8 +1032,122 @@ Creating the Contact page design
 
 
 /* Designing the content on the contact page */
-.content-contact-page {
-    height: 75vh;
+.content-section-contact-page {
+    height: 80vh;
     width: 100%;
-    padding: 0 0 10% 0;
+    padding: 0 0 18vh 0;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Classes for the section with social media, qr code and call to action */
+
+.content-section-clickables-grid {
+    /* grid settings - creating the layout */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    /* Alignment */
+    width: 40vw;
+    margin: 0 10% 0 0;
+    
+}
+
+.clickables-social-media { 
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 10% 0 5% 8%;
+    font-size: 28px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+}
+.contact-sm-icons {
+    display: flex;
+    flex-direction: row;
+    margin: 5% 0 0 0;
+    justify-content: left;
+}
+.contact-sm-icons-styling {
+    width: 3rem;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.clickables-qr-code { 
+    grid-area: 2 / 1 / 3 / 2; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+
+}
+
+.clickables-schedule-call { 
+    grid-area: 2 / 2 / 3 / 3; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    
+}
+.clickables-cta-paragraph {
+    margin-bottom: 5%;
+    display: flex;
+    /* font sizing */
+    font-size: 22px;
+    padding: 0 15% 0 0;
+    line-height: 150%; /* 33px */
+}
+
+.contact-cta-button {
+    color: #ffffff;
+    background-color: #005A04;
+    border-radius: 10px;
+    /* font settings */
+    font-size: 24px;
+    font-weight: 300;
+    /* outline */
+    width: 12rem; /* Scales with font size (1rem = 16px by default) */
+    height: 3rem;
+    border: none;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25), 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    
+}
+
+
+/* Classes for the section with emails and phone number */
+
+.content-section-emails-display {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-end;
+}
+
+.emails-exq-info-box {
+
+}
+
+.emails-exq-media-box {
+    
+}
+
+.emails-mobile-phone {
+
+}
+
+
+/* Cllases for the inquiry form on the contact page */
+
+.content-section-inquiry-form {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
 }

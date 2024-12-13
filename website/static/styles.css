@@ -665,8 +665,8 @@ here I start to design the thrid element of the page
     font-size: 22px;
     cursor: pointer;
     padding: 2.5% 0 2.5% 0;
-    width: 30%;
-    height: 5%;
+    width: 15vw;
+    height: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -985,7 +985,7 @@ Creating the Contact page design
     align-items: end;
     justify-content: space-between;
     /* font settings */
-    font-size: 3.2rem;
+    font-size: 3.8rem;
     text-shadow: 3px 2px 4px #00000030;
     /* alignment */
     padding: 0 3% 0 3%;
@@ -1041,6 +1041,28 @@ Creating the Contact page design
 }
 
 /* Classes for the section with social media, qr code and call to action */
+/* 
+
+I want to design the mobile version (responsive) in a seperate way, so I will attempt to hide all the desktop design here for the mobile version, 
+and I will create different design classes for the mobile.
+
+*/
+.heading-section-contact-page-mobile{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .content-section-contact-page {
+        visibility: hidden; 
+        /* IT WORKED */
+    }
+    .heading-section-contact-page {
+        visibility: hidden;
+    }
+    .heading-section-contact-page-mobile{
+        visibility: visible;
+    }
+}
 
 .content-section-clickables-grid {
     /* grid settings - creating the layout */
@@ -1051,9 +1073,10 @@ Creating the Contact page design
     grid-row-gap: 0px;
     /* Alignment */
     width: 40vw;
-    margin: 0 10% 0 0;
+    margin: 0 5% 0 0;
     
 }
+
 
 .clickables-social-media { 
     grid-area: 1 / 1 / 2 / 3;
@@ -1125,30 +1148,63 @@ Creating the Contact page design
 /* Classes for the section with emails and phone number */
 
 .content-section-emails-display {
-    width: 20vw;
+    width: 25vw;
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: flex-end;
+     /* font settings */
+     font-size: 18px;
+}
+
+.content-section-emails-display p {
+    font-size: 24px;
 }
 
 .emails-exq-info-box {
-
+    margin: 0 0 7% 0;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .emails-exq-media-box {
-    
+    margin: 0 0 7% 0;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .emails-mobile-phone {
-
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 22px;
 }
 
 
 /* Cllases for the inquiry form on the contact page */
 
 .content-section-inquiry-form {
-    width: 30vw;
+    width: 25vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    font-size: 28px;
+    justify-content: flex-end;
+}
+.inquiry-form-button{
+    font-size: 22px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    height: 5vh;
+
 }

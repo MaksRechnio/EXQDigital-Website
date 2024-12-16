@@ -122,13 +122,18 @@ Contact
         <!--here is the content section for the Inquiry form-->
         <section class="content-section-inquiry-form">
             <p class="montserrat-light">Tell <span class="montserrat-regular">us</span> about your <span class="montserrat-medium">project!</span></p>
-            <button class="inquiry-form-button montserrat-light">Send an <span class="montserrat-medium">Inquiry</span><img src="" alt=""></button>
+            <form class="the-inquiry-form" action="/submit_inquiry" method="POST">
+                <input class="inquiry-inputs" type="text" id="name" name="name" placeholder="Name" required>
+    
+                <input class="inquiry-inputs" type="text" id="surname" name="surname" placeholder="Surname" required>
+                
+                <input class="inquiry-inputs" type="text" id="company" name="company" placeholder="Comapny" required>
+                
+                <input class="inquiry-inputs" type="email" id="email" name="email" placeholder="Email" required>
+
+                <textarea class="inquiry-description" id="project" name="project" placeholder="Tell us about your project..." rows="5" required></textarea>
+            </form>
+            <button type="submit" class="inquiry-form-button montserrat-light">Send an <span class="montserrat-medium">Inquiry</span><img src="" alt=""></button>
         </section>
-
-        
-
-    </section>
-    <section></section>
-
 </main>
 {% endblock content %}

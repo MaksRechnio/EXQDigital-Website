@@ -1195,7 +1195,7 @@ and I will create different design classes for the mobile.
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 28px;
+    font-size: 25px;
     justify-content: flex-end;
 }
 .inquiry-form-button{
@@ -1204,7 +1204,27 @@ and I will create different design classes for the mobile.
     color: #ffffff;
     border: none;
     border-radius: 10px;
-    width: 90%;
+    width: 85%;
     height: 5vh;
+}
 
+.the-inquiry-form{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+.inquiry-inputs {
+    height: 5vh;
+    margin: 2% 0 2% 0;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
+}
+
+.inquiry-description {
+    margin: 2% 0 2% 0;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
 }

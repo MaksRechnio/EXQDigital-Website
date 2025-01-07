@@ -1364,6 +1364,25 @@ Second svg - cross
     }
   }
 
+/* Third svg for the first vh of the philosophy page */
+
+.philosophy-third-svg {
+    position: absolute;
+    z-index: 2;
+    margin: 0 0 34% 92%;
+}
+
+.philosophy-third-svg-line-1,
+.philosophy-third-svg-line-2 {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: drawPath 2s ease-in-out forwards;
+}
+
+
+
+
+
 
   /*    =======================
   Designing the second part of the philosophy page - 60 vh

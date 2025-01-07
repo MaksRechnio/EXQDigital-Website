@@ -5,5 +5,71 @@ The Offer
 {% endblock title %}
 
 {% block content %}
+
+<main>
+    <article class="offer-introduction-article pop-in-effect">
+        <p>We are a tailored-solution based <span class="montserrat-regular">Agency</span> that 
+            develops <span class="montserrat-regular">strategies</span> and grows <span class="montserrat-regular">sales</span> 
+            for <span class="montserrat-regular">specialised niches</span> and <span class="montserrat-medium">high-end</span> 
+            <span class="montserrat-regular"><br>E-commerce</span> brands through <span class="montserrat-regular">Facebook</span> 
+            <span class="montserrat-medium">advertising</span>.</p>
+        <button class="offer-cta-button" onclick="openCalendlyPage()">
+            Start <span class="montserrat-medium">Advertising</span>
+            <img src="../static/pictures/white-pointer-arrow.png" alt="white pointer arrow">
+        </button>
+        <svg class="offer-introduction-corner-svg" width="589" height="478" viewBox="0 0 589 478" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="offer-introduction-corner-animation" d="M86 477L86 0.999984" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            <path class="offer-introduction-corner-animation" d="M0 60L587.042 60" stroke="black" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg class="offer-introduction-plus-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <g filter="url(#filter0_d_936_1139)">
+              <path class="offer-introduction-plus-svg-line-1" d="M25.9434 4L25.9434 47" stroke="black" stroke-width="2" stroke-linecap="round"/>
+              <path class="offer-introduction-plus-svg-line-2" d="M47 25.5L4 25.5" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </g>
+            <defs>
+              <filter id="filter0_d_936_1139" x="0.340206" y="0.340206" width="47" height="47" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="0.886598" dy="0.886598"/>
+                <feGaussianBlur stdDeviation="1.7732"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_936_1139"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_936_1139" result="shape"/>
+              </filter>
+            </defs>
+          </svg>
+    </article>
+    <!--Here is the second part of the offer page with the big 'the offer' title-->
+    <article class="offer-title-article pop-in-effect">THE OFFER</article>
+    <!--Here is the third part of the offer page with the information boxes-->
+    <section class="offer-boxes-main">
+        <!-- Here is the first toogle box-->
+        <article class="offer-box-1 pop-in-effect" onclick="toggleBox(this)">
+            <img src="../static/pictures/meta.png" alt="Meta Icon" class="meta-icon" />
+            <article class="offer-content">
+              <p class="offer-content-margins">We <span class="montserrat-medium">scale</span> sales and <span class="montserrat-medium">lead generation</span> 
+                through Meta <span class="montserrat-medium">Advertising</span> management <br>& <span class="montserrat-medium">optimisation</span>.</p>
+              <p class="offer-content-margins">We specialise in <span class="montserrat-medium">High-Networth-Individuals Targetting</span> through Meta <span class="montserrat-medium">campaigns</span>.</p>
+            </article>
+        </article>
+        <!-- Here is the second toogle box-->
+        <article class="offer-box-1 pop-in-effect" onclick="toggleBox(this)">
+            <img src="../static/pictures/high-quality (1).png" alt="Verified icon" class="meta-icon" />
+            <article class="offer-content">
+            <p style="text-align: center; margin: 4% 0 5% 0;">We are an <span class="montserrat-medium">official</span> Meta-<span class="montserrat-medium">partner</span> agency.</p>
+            <p style="text-align: center; margin: 4% 0 5% 0;">This is a <span class="montserrat-medium">tailored-solution</span> advertising agency <span class="montserrat-medium">certified</span> with official <span class="montserrat-medium">Media Buyer’s Certification</span>.</p>
+            </article>
+        </article>
+        <!-- Here is the third toogle box-->
+        <article class="offer-box-1 pop-in-effect" onclick="toggleBox(this)">
+            <img src="../static/pictures/analysis.png" alt="Verified icon" class="meta-icon" />
+            <article class="offer-content">
+                <p style="text-align: center; margin: 4% 0 5% 0; padding: 0 10% 0 10%;">We base our <span class="montserrat-medium">campaigns</span> & <span class="montserrat-medium">strategy</span> on data and <span class="montserrat-medium">Niche</span> expertise.</p>
+                <p style="text-align: center; margin: 4% 0 5% 0; padding: 0 10% 0 10%;">Through an <span class="montserrat-medium">in-depth understanding</span> of the meta tools, we <span class="montserrat-medium">tailor</span> a <span class="montserrat-medium">strategy</span> adapting to our client’s <span class="montserrat-medium">structure</span>.</p>
+            </article>
+        </article>
+    </section>
+</main>
         
 {% endblock content %}

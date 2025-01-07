@@ -143,3 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function openCalendlyPage() {
     window.open('https://calendly.com/maksymilian-exqdigital/30min', '_blank');
   }
+
+  function toggleBox(box) {
+    box.classList.toggle('active'); // Toggles the "active" class
+  }

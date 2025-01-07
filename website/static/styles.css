@@ -1696,3 +1696,163 @@ The last (fifth) part of the philosophy page - seamless  collaboration
     stroke-dashoffset: 400;
     animation: drawLine 3s ease-in-out forwards;
 }
+
+/* 
+-================================================================
+-================================================================
+
+THE START OF THE OFFER TAB
+
+-================================================================
+-================================================================
+*/
+
+.offer-introduction-article {
+    height: 63vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.offer-introduction-article p {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+    padding: 4% 22% 0 22%;
+    margin: 0 0 3% 0;
+    line-height: 140%;
+}
+
+.offer-cta-button {
+    background-color: #005A04;
+    color: #ffffff;
+    font-weight: 300;
+    border: none;
+    border-radius: 10px;
+    padding: 0 0% 0 0%;
+    /* sizing */
+    height: 10%;
+    width: 19%;
+    /* font */
+    font-size: 26px;
+    /* display */
+    filter: drop-shadow(2px 2px 5.5px rgba(0, 0, 0, 0.25));
+}
+
+.offer-introduction-corner-svg {
+    position: absolute;
+    z-index: -1;
+    margin: 0 58% 3% 0;
+}
+
+.offer-introduction-plus-svg {
+    position: absolute;
+    z-index: 1;
+    margin: 0 0 19% 73%;
+}
+.offer-introduction-plus-svg-line-1,
+.offer-introduction-plus-svg-line-2 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawLine 3s ease-in-out forwards;
+}
+.offer-introduction-corner-animation{
+    stroke-dasharray: 600; /* Adjust based on path length */
+    stroke-dashoffset: 600;
+    animation: drawLine 2s ease-in-out forwards;
+}
+
+/* 
+SECOND PART OF THE OFFER PAGE
+*/
+
+.offer-title-article{
+    /* display */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    color: #1E1E1E;
+    text-shadow: -2px -2px 7.1px rgba(0, 0, 0, 0.25), 2px 2px 7.3px rgba(0, 0, 0, 0.25);
+    font-family: Montserrat;
+    font-size: 400px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;  /* Prevent text from wrapping */
+    overflow: hidden;    /* Allow text to overflow the container */
+    text-align: center;
+}
+
+/* 
+DESIGN OF THE THIRD PART OF THE OFFER PAGE - the information boxes
+*/
+
+.offer-boxes-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /* sizing */
+    height: 78vh;
+    width: 100%;
+}
+
+.offer-box-1 {
+    width: 400px; /* Box width */
+    height: 450px; /* Box height */
+    background-color: #1E1E1E; /* Background color */
+    color: #ffffff; /* Text color */
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: -2px -2px 10.8px 0px rgba(0, 0, 0, 0.25), 4px 4px 6.5px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .meta-icon {
+    width: 100px; /* Icon size */
+    height: 100px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px; /* Space below the icon */
+  }
+  
+  .offer-content {
+    display: none; /* Hidden by default */
+    font-size: 23px; /* Updated text size */
+    font-weight: 300;
+    line-height: 1.4; /* Better spacing between lines */
+    text-align: left; /* Align text to the center */
+    padding: 7% 5% 0 6%; 
+    opacity: 0; /* Hidden initially */
+    transition: all 0.3s ease;
+  }
+
+  .offer-content-margins {
+    margin: 4% 0 5% 0;
+    padding: 0 5% 0 5%;
+  }
+  
+  .offer-box-1.active .meta-icon {
+    width: 80px; /* Shrink icon size */
+    height: 80px;
+    position: absolute;
+    top: 45px; /* Move closer to the top */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .offer-box-1.active .offer-content {
+    display: block;
+    opacity: 1; /* Show the content */
+    margin-top: 80px; /* Push the text further below the icon */
+  }

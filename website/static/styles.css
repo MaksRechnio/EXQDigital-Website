@@ -1922,3 +1922,22 @@ DESIGN OF THE THIRD PART OF THE OFFER PAGE - the information boxes
     z-index: 1;
     margin: 0 0 27% 97%;
   }
+
+  /* SVGs for the High Networth individuals Targetting part of the home page  */
+  .hnwi-svg-1{
+    position: absolute;
+    z-index: 1;
+    margin: 4% 0 0 2%;
+  }
+
+  .hnwi-svg-2 {
+    position: absolute;
+    z-index: 1;
+    margin: 11% 0 0 48.5%;
+  }
+
+  .hnwi-svg-3 {
+    position: absolute;
+    z-index: 1;
+    margin: 1% 0 0 97%;
+  }

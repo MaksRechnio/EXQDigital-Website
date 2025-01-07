@@ -139,3 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elementsToAnimate.forEach(element => observer.observe(element));
 });
+
+function openCalendlyPage() {
+    window.open('https://calendly.com/maksymilian-exqdigital/30min', '_blank');
+  }

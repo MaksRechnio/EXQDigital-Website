@@ -8,6 +8,26 @@
     box-sizing: border-box; /* Ensures consistent box model */
 }
 
+/* Style the scrollbar for WebKit-based browsers */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 6px;               /* Width of the scrollbar */
+  }
+  
+  html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: #fff;         /* Track background (white) */
+  }
+  
+  html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #000;         /* Scrollbar thumb color (black) */
+    border-radius: 3px;       /* Rounded edges for pill shape */
+    border: 1px solid #fff;   /* Optional border for separation */
+  }
+  
+  /* Firefox scrollbar styling */
+  html, body {
+    scrollbar-width: thin;    /* Thin scrollbar */
+    scrollbar-color: #000 #fff; /* Black thumb, white track */
+  }
 
 /* FONTS -MONTSERRAT - Defined seperately to allow playing with font weight */
 
@@ -46,6 +66,13 @@
     font-style: normal;
   }
   
+.montserrat-semibold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+}
+
   .montserrat-bold {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -1457,4 +1484,116 @@ Second svg - cross
 }
 
 
-/* Start of the design of the third part of the philosophy page */
+/*
+=====================================================
+=====================================================
+
+Start of the design of the third part of the philosophy page 
+
+=====================================================
+=====================================================
+*/
+
+.key-results-main {
+    height: 68vh;
+    width: 100%;
+    /* display settings */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.key-results-article {
+    display: flex;
+    flex-direction: column;
+    /* font settings */
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 300;
+    /* adjustment */
+    padding: 0 20% 0 8%;
+}
+
+.key-results-article h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 2%;
+}
+
+.key-results-article p {
+    margin: 2.5% 0 2.5% 0;
+}
+
+.key-results-funnel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8% 0 0;
+}
+
+.key-results-funnel-img {
+    width: 82%;
+    height: auto;
+}
+
+.key-results-first-svg {
+    position: absolute;
+    z-index: -1;
+    margin: 0% 0 21% 40%;
+}
+
+.key-results-second-svg {
+    position: absolute;
+    z-index: 1;
+    margin: 35% 0 0 97%;
+}
+
+
+
+/*
+=======================
+================= 
+The Fourth part of the philosophy oage - quality takes time
+=================
+=======================
+*/
+
+.quality-time-main {
+    height: 19vh;
+    width: 100%;
+    /* background */
+    background-color: #1E1E1E;
+    color: #ffffff;
+    /* display settings */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    /* alignment */
+    padding: 0 4% 0 4%;
+}
+
+.quality-time-icon {
+    height: 40%;
+    width: auto;
+    border-radius: 50px;
+    box-shadow: 0px -3px 4px 0px rgba(0, 0, 0, 0.25) inset, 2px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.quality-time-article{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.quality-time-button {
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 300;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    /* layout */
+    height: 35%;
+    padding: 0 1.5% 0 1.5%;
+    border-radius: 10px;
+}

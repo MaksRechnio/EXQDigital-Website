@@ -1796,7 +1796,7 @@ DESIGN OF THE THIRD PART OF THE OFFER PAGE - the information boxes
     align-items: center;
     justify-content: space-evenly;
     /* sizing */
-    height: 78vh;
+    height: 75vh;
     width: 100%;
 }
 
@@ -1855,4 +1855,55 @@ DESIGN OF THE THIRD PART OF THE OFFER PAGE - the information boxes
     display: block;
     opacity: 1; /* Show the content */
     margin-top: 80px; /* Push the text further below the icon */
+  }
+
+
+  /* 
+  DESIGN OF THE fourth PART OF THE OFFER PAGE - the timeline
+  */
+  .timeline-main {
+    /* sizing */
+    height: 95vh;
+    width: 100%;
+    /* display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline-main h2{
+    font-size: 48px;
+    font-weight: 300;
+    margin: 2% 0 4% 0;
+  }
+
+  .timeline-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .timeline-svg-1{
+    position: absolute;
+    z-index: 1;
+    margin: 40% 80% 0 0
+  }
+
+  .timeline-svg-1-path {
+    stroke-dasharray: 600; /* Adjust based on path length */
+    stroke-dashoffset: 600;
+    animation: drawLine 2s ease-in-out forwards;
+  }
+  /* second svg corner */
+
+  .timeline-svg-2 {
+    position: absolute;
+    z-index: 2;
+    margin: 0 0 32% 80%;
+  }
+
+  .timeline-svg-3 {
+    position: absolute;
+    z-index: 0;
+    margin: 0 49% 39.5% 0;
   }

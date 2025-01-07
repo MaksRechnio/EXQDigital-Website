@@ -1581,7 +1581,7 @@ The Fourth part of the philosophy oage - quality takes time
 }
 
 .quality-time-article{
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 400;
 }
 
@@ -1596,4 +1596,103 @@ The Fourth part of the philosophy oage - quality takes time
     height: 35%;
     padding: 0 1.5% 0 1.5%;
     border-radius: 10px;
+    /* border */
+    border: none;
+}
+
+
+/* 
+=======================
+===================
+The last (fifth) part of the philosophy page - seamless  collaboration 
+===================
+=======================
+*/
+
+.seamless-collaboration-main {
+    width: 100%;
+    height: 80vh;
+    /* display */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.seamless-collaboration-article {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 140%;
+    /* display */
+    display: flex;
+    flex-direction: column;
+    /* alignment */
+    padding: 0 57% 0 8%;
+    z-index: 1;
+    position: absolute;
+    
+}
+
+.seamless-collaboration-article h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0 0 3% 0;
+}
+
+.seamless-collaboration-article p {
+    margin: 2% 0 2% 0;
+}
+
+/* pictures part */
+
+.seamless-collaboration-pictures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: -1;
+    padding-left: 30%;
+}
+
+.seamless-collaboration-picture-1 {
+    width: 35%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    transform: translate(12%, 0%);
+
+}
+
+.seamless-collaboration-picture-2 {
+    width: 35%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: -1;
+    transform: translate(51%, 32%);
+}
+
+.seamless-collaboration-first-svg {
+    position: absolute;
+    z-index: 0;
+    margin: 20% 0 0 35%;
+}
+.seamless-collaboration-second-svg{
+    position: absolute;
+    z-index: 2;
+    margin: 0 0 25% 5%;
+}
+
+.seamless-collaboration-second-svg-line-1,
+.seamless-collaboration-second-svg-line-2{
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawLine 3s ease-in-out forwards;
+}
+
+.seamless-collaboration-first-svg-line-1,
+.seamless-collaboration-first-svg-line-2 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawLine 3s ease-in-out forwards;
 }

@@ -1228,3 +1228,214 @@ and I will create different design classes for the mobile.
     padding: 10px;
     border: 1px solid #000000;
 }
+
+
+/* 
+========================================================================================
+========================================================================================
+
+    HERE I START TO STYLE THE PHILOSOPHY WEBSITE
+
+========================================================================================
+========================================================================================
+*/
+
+.philosophy-landing-vh {
+    width: 100%;
+    height: 82vh; 
+    display: flex;
+    align-items: flex-end;
+    /* padding: 0 0 2% 7%; */
+      
+}
+
+.philosophy-landing-vh h1{
+    font-size: 180px;
+    text-align: left;
+    line-height: 140%;
+    z-index: 0;
+    padding: 0 0 2% 7%;
+    margin-bottom: 2vh;
+}
+
+.philosophy-picture-quote{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin: 0 0 21rem 42rem;
+    align-items: center;
+    z-index: -1;
+    padding: 0 10% 0 0;
+    
+}
+
+.philosophy-maks-picture {
+    /* I test out a new approach - directly copying the layouts and styling from the figma design file */
+    width: 150.435px;
+    height: 150.435px; 
+    border-radius: 75.217px;
+    box-shadow: 0px 4.122px 4.122px 0px rgba(0, 0, 0, 0.25);
+}
+
+.philosophy-quote-texts {
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 140%; /* 25.965px */
+}
+
+.philosophy-texts-margin {
+    margin: 0 0 0.2rem 2rem;
+}
+
+.philosophy-texts-margin-down {
+    margin-left: 2.5rem;
+}
+
+.texts-margin {
+    margin: 0 0 0 5%;
+}
+
+.second-part-text-margin {
+    margin: 1rem 0 0.2rem 1.2rem;
+}
+
+/* 
+
+=============================
+First svg file implementation in the philosophy page
+============================
+*/
+
+.philosophy-svg-underline {
+    z-index: -2;
+    position: absolute;
+    margin: 2% 0 0% 2%;
+
+}
+
+/* Unique classes to avoid conflicts */
+.unique-line-1,
+.unique-line-2 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawLine 2s ease-in-out forwards;
+}
+
+.unique-line-2 {
+  animation-delay: 0.5s; /* Delay for staggered drawing */
+}
+
+/* Keyframe animation to create the draw-out effect */
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 
+=============
+Second svg - cross
+=============
+*/
+
+.philosophy-second-svg {
+    z-index: 1;
+    position: absolute;
+    margin: 0 0 38% 5%;
+}
+
+/* Apply draw animation to the paths */
+.path-animate {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: drawPath 2s ease-in-out forwards;
+  }
+  
+  .path-animate-delay {
+    animation-delay: 0.5s;
+  }
+  
+  /* Keyframe animation to create the draw-out effect */
+  @keyframes drawPath {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+  /*    =======================
+  Designing the second part of the philosophy page - 60 vh
+        ======================== */
+
+.understanding-power-main {
+    height: 60vh;
+    width: 100%;
+    /* colours */
+    background-color: #1E1E1E;
+    color: #ffffff;
+    /* Fonts */
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 300;
+    /* alignment and display */
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5% 0 0%;
+}
+
+.understanding-power-main h2{
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 2%;
+}
+
+.understanding-power-article {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10% 0 7%;
+
+}
+
+.understanding-power-texts-margin {
+    margin: 0.3rem 0 0.3rem 0;
+}
+
+.understanding-power-4{
+    font-size: 180px;
+    font-weight: 100;
+    margin: 0 6% 0 0;
+}
+
+.understanding-power-corner-svg {
+    position: absolute;
+    z-index: 1;
+    margin: 12% 0 0 2.5%;
+}
+
+.understanding-power-corner-line-1,
+.understanding-power-corner-line-2 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawLine 2s ease-in-out forwards;
+}
+
+/* Styling of the second svg - the plus, on the understanding is power part */
+.understanding-power-plus-svg {
+    position: absolute;
+    z-index: 2;
+    margin: 0 0px 13% 90%;
+}
+
+.understanding-power-plus-line-1,
+.understanding-power-plus-line-2 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawLine 3s ease-in-out forwards;
+}
+
+
+/* Start of the design of the third part of the philosophy page */

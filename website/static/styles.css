@@ -509,7 +509,7 @@ The design for the the next element - second vh
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    padding: 0 0vw 0 7vw;
+    /* padding: 0 0vw 0 7vw; */
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -531,7 +531,7 @@ The design for the the next element - second vh
 .high-end-niches-text-box {
     display: flex;
     flex-direction: column;
-    padding: 0 5vw 0 0;
+    padding: 0 3vw 0 7vw;
 }
 
 .high-end-niches-cta-buttons {
@@ -1906,4 +1906,19 @@ DESIGN OF THE THIRD PART OF THE OFFER PAGE - the information boxes
     position: absolute;
     z-index: 0;
     margin: 0 49% 39.5% 0;
+  }
+
+
+  /* FIXING THE HOME PAGE SVG */
+
+  .high-end-niches-svg-1 {
+    position: absolute;
+    z-index: 1;
+    margin: 0 0 2% 5%;
+  }
+
+  .high-end-niches-svg-2 {
+    position: absolute;
+    z-index: 1;
+    margin: 0 0 27% 97%;
   }

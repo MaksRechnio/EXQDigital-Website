@@ -1739,6 +1739,7 @@ THE START OF THE OFFER TAB
     font-size: 26px;
     /* display */
     filter: drop-shadow(2px 2px 5.5px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
 }
 
 .offer-introduction-corner-svg {

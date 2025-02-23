@@ -36,14 +36,14 @@
         </div>
 
         <div class="hamburger" onclick="toggleMenu()">
-            <img src="{{ url_for('static', filename='images/hamburger-icon.png') }}" alt="Menu">
+            <img src="../static/pictures/hamburger-menu.png" alt="Menu">
         </div>
 
         <div class="mobile-menu">
             <ul>
-                <li><a href="{{ url_for('views.the_offer') }}">The Offer</a></li>
-                <li><a href="{{ url_for('views.philosophy') }}">Philosophy</a></li>
-                <li><a href="{{ url_for('views.contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('views.the_offer') }}">THE OFFER</a></li>
+                <li><a href="{{ url_for('views.philosophy') }}">PHILOSOPHY</a></li>
+                <li><a href="{{ url_for('views.contact') }}">CONTACT</a></li>
             </ul>
         </div>
     </nav>
@@ -54,4 +54,15 @@
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+<footer class="footer">
+    <section>
+        <img class="footer-qrcode" src="../static/pictures/exq-qrcode.jpg" alt="exq qr code">
+    </section>
+    <section>
+        <p class="montserrat-light">Schedule a quick <span class="montserrat-medium">introductory</span> meeting with our <span class="montserrat-medium">team</span>!</p>
+        <button onclick="openCalendlyPage()" class="footer-button montserrat-light">Schedule <span class="montserrat-medium">Call</span></button>
+    </section>
+    <section></section>
+    <section></section>
+</footer>
 </html>

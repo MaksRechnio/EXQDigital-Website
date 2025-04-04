@@ -55,14 +55,25 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 <footer class="footer">
-    <section>
+    <section class="footer-qrcode-space">
         <img class="footer-qrcode" src="../static/pictures/exq-qrcode.jpg" alt="exq qr code">
     </section>
-    <section>
+    <section class="footer-cta">
         <p class="montserrat-light">Schedule a quick <span class="montserrat-medium">introductory</span> meeting with our <span class="montserrat-medium">team</span>!</p>
         <button onclick="openCalendlyPage()" class="footer-button montserrat-light">Schedule <span class="montserrat-medium">Call</span></button>
     </section>
-    <section></section>
-    <section></section>
+    <section class="footer-socialmedia">
+        <p><span class="montserrat-medium">Follow</span> us on <span class="montserrat-regular">Social</span> Media!</p>
+        <section class="footer-socialmedia-content">
+            <img class="footer-socialmedia-icon" src="../static/pictures/facebook (1).png" alt="facebook icon">
+            <img class="footer-socialmedia-icon" src="../static/pictures/instagram (1).png" alt="instagram icon">
+            <img class="footer-socialmedia-icon" src="../static/pictures/linkedin.png" alt="linkedin icon">
+        </section>
+    </section>
+    <section class="footer-contactinfo">
+        <h2>Inquiry & Collaboration</h2>
+        <p>info@exqdigital.com</p>
+        <p><img class="footer-phone" src="../static/pictures/phone.png" alt="phone icon">+48 609 409 779</p>
+    </section>
 </footer>
 </html>
